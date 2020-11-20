@@ -54,17 +54,19 @@ class Solution:
         dicti={1:"I",4:"IV",5:"V",9:"IX",10:"X",40:"XL",50:"L",90:"XC",100:"C",400:"CD",500:"D",900:"CM",1000:"M"}
         retstr=""
         for i in range(len(nmstr),0,-1):
-            if num%(10**i)-num%(10**(i-1)) in dicti:
+            #adding numbers in dict
+            if num%(10**i)-num%(10**(i-1)) in dicti:                                              
                 
                 addstr = dicti[num%(10**i)-num%(10**(i-1))]
                 retstr+=addstr
+            #adding numbers less than 4 by multiplying the value by increment
             elif int((num%(10**i)-num%(10**(i-1)))/10**(i-1))<4:
         
                 astr = dicti[10**(i-1)]*int((num%(10**i)-num%(10**(i-1)))/10**(i-1))
                 retstr+=astr
-            
+            #adding number higher than 5 by substracting five and add remaining
             else:
-                print(10**(i-1))
+                
                 atr=dicti[(10**(i-1))*5]
                 atr+=dicti[10**(i-1)]*int(((num%(10**i)-num%(10**(i-1)))/10**(i-1))-5)
                 retstr+=atr
