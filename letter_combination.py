@@ -26,7 +26,6 @@ class Solution:
                 listt.append(dicti[int(digits[i])])       
             c = list(itertools.product(*listt))
             res = list(map("".join, c)) 
-
             return res
         else:
             return digits
