@@ -1,8 +1,8 @@
-/*
+"""
 
 Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
 
-*/
+"""
 
 class Solution:
     def isPalindrome(self, x: int) -> bool:
@@ -17,4 +17,14 @@ class Solution:
                 start+=1
                 end-=1
         return True
-            
+   
+############################################
+
+#Another and more effective soultion
+
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        str_x = str(x)
+        rev = str_x[::-1]
+        return str_x==rev
+                     
