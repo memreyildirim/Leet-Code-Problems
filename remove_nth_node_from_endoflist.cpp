@@ -4,8 +4,6 @@
 
 Follow up: Could you do this in one pass?
 
-
-
 Example 1:
 
 
